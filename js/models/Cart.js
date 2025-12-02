@@ -14,7 +14,7 @@ export class Cart {
   }
 
   updateQuantity(productId, quantity) {
-    const item = this.items.find(item.product.id === productId)
+    const item = this.items.find(item => item.product.id === productId)
 
     if (!item) return
 
