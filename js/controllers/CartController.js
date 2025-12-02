@@ -5,7 +5,7 @@ export class CartController {
   constructor(view) {
     this.view = view
     this.cart = new Cart()
-    thia.products = []
+    this.products = []
 
     this.inicializeProducts()
     this.view.renderProducts(this.products)
@@ -20,7 +20,7 @@ export class CartController {
   inicializeProducts() {
     this.products = [
       new Product('1', 'Mouse', 49.9),
-      new Product('2', 'Teclado, 129.9'),
+      new Product('2', 'Teclado', 129.9),
       new Product('3', 'Monitor', 899.9),
     ]
   }

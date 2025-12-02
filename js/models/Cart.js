@@ -4,9 +4,7 @@ export class Cart {
   }
 
   addProduct(product) {
-    const existingItem = thiss.items.find(
-      item => item.product.id === product.id,
-    )
+    const existingItem = this.items.find(item => item.product.id === product.id)
 
     if (existingItem) {
       existingItem.quantity++
@@ -37,7 +35,7 @@ export class Cart {
 
   getTotal() {
     return this.items.reduce((sum, item) => {
-      return sum + item.product.price * quantity
+      return sum + item.product.price * item.quantity
     }, 0)
   }
 }

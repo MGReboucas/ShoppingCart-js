@@ -1,6 +1,6 @@
 export class CartView {
   constructor() {
-    this.productsList = document.getElementById('products-list')
+    this.productsList = document.getElementById('product-list')
     this.cartItems = document.getElementById('cart-items')
     this.cartTotal = document.getElementById('cart-total')
 
@@ -48,7 +48,7 @@ export class CartView {
           </button>
         </td>
       `
-      this.appendChild(tr)
+      this.cartItems.appendChild(tr)
     })
     this.cartTotal.textContent = total.toFixed(2)
   }
@@ -57,7 +57,7 @@ export class CartView {
     this.productForm.addEventListener('submit', event => {
       event.preventDefault()
 
-      const name = this.inputName.ariaValueMax.trim()
+      const name = this.inputName.value.trim()
       const price = parseFloat(this.inputPrice.value)
 
       if (!name || Number.isNaN(price) || price < 0) {
@@ -84,7 +84,7 @@ export class CartView {
   bindUpdateQuantity(handler) {
     this.cartItems.addEventListener('change', event => {
       if (event.target.classList.contains('cart-qty')) {
-        const id = MouseEvent.target.dataset.id
+        const id = event.target.dataset.id
         const qty = parseInt(event.target.value, 10)
 
         handler(id, qty)
