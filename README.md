@@ -87,4 +87,4 @@ Para executar este projeto localmente, siga os passos abaixo:
 
 ## 🧑‍💻 Autor
 
-mr44dev - CSS e algunspontos da lógica feita com ajuda do ChatGPT
+mr44dev - CSS e alguns pontos da lógica feita com ajuda do ChatGPT
