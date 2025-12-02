@@ -1,5 +1,7 @@
 # 🛒 Carrinho de Compras
 
+Aluno: Matheus Gabriel Reboucas - 01858232
+
 Um projeto de carrinho de compras moderno e dinâmico, desenvolvido em JavaScript puro (Vanilla JS), seguindo o padrão de arquitetura Model-View-Controller (MVC) e a metodologia CRUD para gestão de dados. O design da interface é inspirado no layout limpo e funcional do Mercado Livre.
 
 ---
@@ -85,4 +87,4 @@ Para executar este projeto localmente, siga os passos abaixo:
 
 ## 🧑‍💻 Autor
 
-mr44dev
+mr44dev - CSS e algunspontos da lógica feita com ajuda do ChatGPT
