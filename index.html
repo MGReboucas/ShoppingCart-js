@@ -4,39 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrinho de compras</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <h1 class="title_page">Carrinho de compras</h1>
+  <div class="page">
+    <header class="page-render">
+      <h1>Carrinho de compras</h1>
+    </header>
 
-  <section >
-    <h2>Produtos disponíveis</h2>
-    <ul id="products-list"></ul>
-  </section>
+    <main class="cart-layout">
+      <div class="cart-main">
+        <section class="card">
+          <h2 class="card-title">Produtos disponíveis</h2>
+          <ul id="products-list" class="products-list"></ul>
+        </section>
 
+        <section class="card">
+          <h2 class="card-title">Adicionar novo produto</h2>
+          <form id="products-form" class="product-form">
+            <input
+              type="text"
+              id="product-name"
+              placeholder="Nome do Produto"
+              required
+            />
 
-  <section>
-    <h2>Adicionar novo produto</h2>
-    <form id="product-form">
-      <input type="text" id="product-name" placeholder="Nome do produto" reequired>
-      <input type="number" id="product-price" placeholder="Preço" step="0.01" min="0" required>
-      <button type="submit">Adicionar Produto</button>
-    </form>
-  </section>
+            <input 
+              type="text"
+              id="product-price"
+              placeholder="Preço"
+              step="0.01"
+              min="0"
+              required
+            />
+            <button type="submit">Adicionar produto</button>
+          </form>
+        </section>
 
-  <section>
-    <h2>Carrinho</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Produto</th>
-          <th>Preço</th>
-          <th>Qtd</th>
-          <th>Total</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-    </table>
-  </section>
+        <section class="card">
+          <h2 class="card-title">Carrinho</h2>
+          <div class="cart-table-wrapper">
+            <table class="cart-table">
+              <thead>
+                <tr>
+                  <th>Produto</th>
+                  <th>Preço</th>
+                  <th>Qtd</th>
+                  <th>Total</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody id="cart-items"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <aside class="cart-summary card">
+        <h2 class="card-title">Resumo da compra</h2>
+        <div class="cart-summary-row">
+          <span>Total</span>
+          <span class="cart-summary-total">
+            R$ <span id="cart-total">0,00</span>
+          </span>
+        </div>
+        <button class="cart-summary-button">Continuar a compra</button>
+      </aside>
+    </main>
+  </div>
 
   <script type="module" src="./js//app.js"></script>
 </body>
